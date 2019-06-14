@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="wildfly-16.0.0">
+    <CLASSES>
+      <root url="file://C:/wildfly-16.0.0.Final/standalone/lib" />
+      <root url="jar://C:/wildfly-16.0.0.Final/bin/client/jboss-cli-client.jar!/" />
+      <root url="jar://C:/wildfly-16.0.0.Final/bin/client/jboss-client.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src/main/java" />
+    </SOURCES>
+  </library>
+</component>
