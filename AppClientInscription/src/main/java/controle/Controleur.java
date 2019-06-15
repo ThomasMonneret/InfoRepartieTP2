@@ -9,16 +9,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+
+import metier.Reservation;
 import service.EnvoiInscription;
 
 
 import java.sql.Date;
+import java.util.Calendar;
 
 import javax.annotation.Resource;
 
 import meserreurs.MonException;
 import metier.Inscription;
+import service.EnvoiReservation;
 
 import javax.naming.NamingException;
 
@@ -32,6 +37,8 @@ public class Controleur extends HttpServlet {
     private static final String ACTION_TYPE = "action";
     private static final String AJOUTER_INSCRIPTION = "ajouteInscription";
     private static final String ENVOI_INSCRIPTION = "envoiInscription";
+    private static final String AJOUTER_RESERVATION = "ajouteReservation";
+    private static final String ENVOI_RESERVATION = "envoiReservation";
     private static final String RETOUR_ACCUEIL = "Retour";
 
     /**
@@ -145,7 +152,55 @@ public class Controleur extends HttpServlet {
                     request.getRequestDispatcher("PostMessage.jsp").forward(request, response);
                 }
             }
+        } else if (AJOUTER_RESERVATION.equals(actionName)) {
+
+            request.getRequestDispatcher("AjouteReservation.jsp").forward(request, response);
+        } else if (ENVOI_RESERVATION.equals(actionName)) {
+            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+            response.setContentType("text/html;charset=UTF-8");
+            // On récupère les informations sisies
+
+
+                try {
+                    Integer idVehicule = Integer.parseInt(request.getParameter("idVehicule"));
+                    Integer idClient = Integer.parseInt(request.getParameter("idReservataire"));
+
+                    java.util.Date dateReservation = sdf.parse(request.getParameter("dateReservation"));
+                    Timestamp timestampReservation = new java.sql.Timestamp(dateReservation.getTime());
+                    Calendar c = Calendar.getInstance();
+                    c.setTime(dateReservation);
+                    c.add(Calendar.DATE, 1);
+                    java.util.Date dateEcheance = c.getTime();
+                    Timestamp timestampEcheance = new java.sql.Timestamp(dateEcheance.getTime());
+
+                    // On crée une demande de réservation avec ces valeurs
+                    Reservation uneReservation = new Reservation();
+                    uneReservation.setVehicule(idVehicule);
+                    uneReservation.setClient(idClient);
+                    uneReservation.setDateReservation(timestampReservation);
+                    uneReservation.setDateEcheance(timestampEcheance);
+
+                    // On envoie cette demande d'inscription dans le topic
+                    EnvoiReservation unEnvoi = new EnvoiReservation();
+                    boolean ok = unEnvoi.publier(uneReservation,topic,cf);
+                    if (ok)
+                        // On retourne àla page d'accueil
+                        this.getServletContext().getRequestDispatcher("/index.jsp").include(request, response);
+                    else {
+                        this.getServletContext().getRequestDispatcher("/Erreur.jsp").include(request, response);
+                    }
+                } catch (MonException m) {
+                    // On passe l'erreur à  la page JSP
+                    request.setAttribute("MesErreurs", m.getMessage());
+                    request.getRequestDispatcher("PostMessage.jsp").forward(request, response);
+                } catch (Exception e) {
+                    // On passe l'erreur à la page JSP
+                    System.out.println("Erreur client  :" + e.getMessage());
+                    request.setAttribute("MesErreurs", e.getMessage());
+                    request.getRequestDispatcher("PostMessage.jsp").forward(request, response);
+                }
         }
+
     }
 
 

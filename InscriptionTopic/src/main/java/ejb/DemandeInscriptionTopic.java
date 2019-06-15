@@ -94,7 +94,7 @@ public class DemandeInscriptionTopic implements MessageListener {
                EcritureErreur(e.getMessage());
             }
          catch (Exception ex) {
-        System.out.println("Erreur Cast  :"+ ex.getMessage());
+        System.out.println("Erreur Cast : "); ex.printStackTrace(System.out);
         EcritureErreur(ex.getMessage());
     }
     }
