@@ -1,7 +1,6 @@
 package service;
 
 import meserreurs.MonException;
-import metier.Inscription;
 import metier.Reservation;
 
 import javax.jms.*;

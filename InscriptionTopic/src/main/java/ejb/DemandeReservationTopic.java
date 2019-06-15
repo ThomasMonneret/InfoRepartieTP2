@@ -1,10 +1,6 @@
 package ejb;
 
-import dao.EnregistreInscription;
 import dao.EnregistrerReservation;
-import meserreurs.MonException;
-import metier.Inscription;
-import metier.InscriptionEntity;
 import metier.Reservation;
 import metier.ReservationEntity;
 
@@ -16,7 +12,6 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.ObjectMessage;
-import javax.naming.NamingException;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;

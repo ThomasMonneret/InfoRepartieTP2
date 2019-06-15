@@ -13,19 +13,14 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 import metier.Reservation;
-import service.EnvoiInscription;
 
 
-import java.sql.Date;
 import java.util.Calendar;
 
 import javax.annotation.Resource;
 
 import meserreurs.MonException;
-import metier.Inscription;
 import service.EnvoiReservation;
-
-import javax.naming.NamingException;
 
 /**
  * Servlet implementation class Traitement
@@ -35,8 +30,6 @@ public class Controleur extends HttpServlet {
 
     private static final long serialVersionUID = 10L;
     private static final String ACTION_TYPE = "action";
-    private static final String AJOUTER_INSCRIPTION = "ajouteInscription";
-    private static final String ENVOI_INSCRIPTION = "envoiInscription";
     private static final String AJOUTER_RESERVATION = "ajouteReservation";
     private static final String ENVOI_RESERVATION = "envoiReservation";
     private static final String RETOUR_ACCUEIL = "Retour";
@@ -93,65 +86,8 @@ public class Controleur extends HttpServlet {
         String actionName = request.getParameter(ACTION_TYPE);
 
         // Si on veut afficher l'ensemble des demandes d'inscription
-        if (AJOUTER_INSCRIPTION.equals(actionName)) {
-
-            request.getRequestDispatcher("AjouteInscription.jsp").forward(request, response);
-
-        } else if (RETOUR_ACCUEIL.equals(actionName)) {
+        if (RETOUR_ACCUEIL.equals(actionName)) {
             this.getServletContext().getRequestDispatcher("/index.jsp").include(request, response);
-        } else if (ENVOI_INSCRIPTION.equals(actionName)) {
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            response.setContentType("text/html;charset=UTF-8");
-            // On récupère les informations sisies
-            String nom = request.getParameter("nom");
-            String prenom = request.getParameter("prenom");
-
-            if ((nom != null) && (prenom != null)) {
-                try {
-                    // On récupère la valeur des autres champs saisis par
-                    // l'utilisateur
-                    // on transfome la date
-                    // au format Mysql java.sql.Date
-                    String datenaissance = request.getParameter("datenaissance");
-                    java.util.Date initDate = new SimpleDateFormat("dd/MM/yyyy").parse(datenaissance);
-                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-                    String parsedDate = formatter.format(initDate);
-                    initDate = formatter.parse(parsedDate);
-                    Date uneDate = new Date(initDate.getTime());
-
-                    String adresse = request.getParameter("adresse");
-                    String cpostal = request.getParameter("cpostal");
-                    String ville = request.getParameter("ville");
-
-                    // On crée une demande d'inscription avec ces valeurs
-                    Inscription unedemande = new Inscription();
-                    unedemande.setNomcandidat(nom);
-                    unedemande.setPrenomcandidat(prenom);
-                    unedemande.setDatenaissance(uneDate);
-                    unedemande.setAdresse(adresse);
-                    unedemande.setCpostal(cpostal);
-                    unedemande.setVille(ville);
-
-                    // On envoie cette demande d'inscription dans le topic
-                    EnvoiInscription unEnvoi = new EnvoiInscription();
-                    boolean ok = unEnvoi.publier(unedemande,topic,cf);
-                    if (ok)
-                        // On retourne àla page d'accueil
-                        this.getServletContext().getRequestDispatcher("/index.jsp").include(request, response);
-                    else {
-                        this.getServletContext().getRequestDispatcher("/Erreur.jsp").include(request, response);
-                    }
-                } catch (MonException m) {
-                    // On passe l'erreur à  la page JSP
-                    request.setAttribute("MesErreurs", m.getMessage());
-                    request.getRequestDispatcher("PostMessage.jsp").forward(request, response);
-                } catch (Exception e) {
-                    // On passe l'erreur à la page JSP
-                    System.out.println("Erreur client  :" + e.getMessage());
-                    request.setAttribute("MesErreurs", e.getMessage());
-                    request.getRequestDispatcher("PostMessage.jsp").forward(request, response);
-                }
-            }
         } else if (AJOUTER_RESERVATION.equals(actionName)) {
 
             request.getRequestDispatcher("AjouteReservation.jsp").forward(request, response);

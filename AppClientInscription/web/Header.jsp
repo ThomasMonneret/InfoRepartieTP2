@@ -18,7 +18,6 @@
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="index.jsp">Accueil</a></li>
-            <li><a href="AjouteInscription.jsp">Ajouter Inscription</a></li>
             <li><a href="AjouteReservation.jsp">Ajouter Reservation</a></li>
         </ul>
     </div>
