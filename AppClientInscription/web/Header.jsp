@@ -1,7 +1,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="refresh" content="0;URL=javascript:fermer();">
-    <title> AutoLib </title>
+    <title> Autolib </title>
     <link rel="stylesheet" href="resources/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/jquery-ui.min.css">
@@ -13,12 +13,18 @@
 <nav class="navbar navbar-inverse inscription-header">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a id="logo_polytech" class="navbar-brand" href="index.jsp"> <img src="resources/images/logo.png"
+            <a id="logo_polytech" class="navbar-brand" href=""> <img src="resources/images/logo.png"
                                                                               height="45px"></a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="index.jsp">Accueil</a></li>
-            <li><a href="AjouteReservation.jsp">Ajouter Reservation</a></li>
+            <li class="active"><a href="">Accueil</a></li>
+            <c:if test="${sessionScope.id == null }">
+                <li><a href="Controleur?action=connexion">Connexion</a></li>
+            </c:if>
+            <c:if test="${sessionScope.id > 0  }">
+                <li><a href="Controleur?action=listeStations">Nouvelle réservation</a></li>
+                <li><a href="Controleur?action=logout">Déconnexion</a></li>
+            </c:if>
         </ul>
     </div>
 </nav>

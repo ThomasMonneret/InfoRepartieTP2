@@ -7,35 +7,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4e6c6e4-87b2-4624-a480-4c45b51e2531" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_spring_aop_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_spring_beans_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_spring_context_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_spring_core_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_spring_expression_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_spring_orm_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/libraries/Maven__org_springframework_spring_tx_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/controle/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/BorneEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/ClientEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/ReservationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/ReservationEntityPK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/StationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/TypeVehiculeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/UtilisateurEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/UtiliseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/UtiliseEntityPK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/VehiculeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/repositories/ClientEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/repositories/StationEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/web/Connexion.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppClientInscription/web/ListeStations.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/.idea/artifacts/AppClientInscription_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/artifacts/AppClientInscription_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AppClientInscription/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/AjouteInscription.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/AppClientInscription.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/AppClientInscription.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/Header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/WEB-INF/classes/controle/Controleur.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/WEB-INF/classes/controle/Controleur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/WEB-INF/classes/metier/Inscription.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/WEB-INF/classes/service/EnvoiInscription.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/WEB-INF/classes/meserreurs/MonException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/WEB-INF/classes/meserreurs/MonException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/WEB-INF/classes/metier/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/WEB-INF/classes/metier/Reservation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/WEB-INF/classes/service/EnvoiReservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/WEB-INF/classes/service/EnvoiReservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/resources/fonts/028a6989891a915f442e019371696ab7--atheism-catholic-churches (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/out/artifacts/AppClientInscription_war_exploded/resources/fonts/028a6989891a915f442e019371696ab7--atheism-catholic-churches.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AppClientInscription/src/main/java/controle/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/controle/Controleur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppClientInscription/src/main/java/metier/Inscription.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppClientInscription/src/main/java/service/EnvoiInscription.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppClientInscription/src/main/java/service/EnvoiReservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/src/main/java/service/EnvoiReservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AppClientInscription/target/classes/controle/Controleur.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/target/classes/controle/Controleur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppClientInscription/target/classes/metier/Inscription.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppClientInscription/target/classes/service/EnvoiInscription.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/target/classes/meserreurs/MonException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/target/classes/meserreurs/MonException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/target/classes/metier/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/target/classes/metier/Reservation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AppClientInscription/target/classes/service/EnvoiReservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/target/classes/service/EnvoiReservation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppClientInscription/web/AjouteInscription.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../AppClientInscription/web/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/web/Header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../AppClientInscription/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/web/resources/fonts/028a6989891a915f442e019371696ab7--atheism-catholic-churches (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppClientInscription/web/resources/fonts/028a6989891a915f442e019371696ab7--atheism-catholic-churches.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/EnregistreInscription.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ejb/DemandeInscriptionTopic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ejb/DemandeReservationTopic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ejb/DemandeReservationTopic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metier/Inscription.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metier/InscriptionEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/EnregistreInscription.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ejb/DemandeInscriptionTopic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ejb/DemandeReservationTopic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ejb/DemandeReservationTopic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/metier/Inscription.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/metier/InscriptionEntity.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,11 +90,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/EnregistrerReservation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+            <state relative-caret-position="374">
+              <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/metier/StationEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -112,11 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ejb/DemandeReservationTopic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="-170">
               <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -172,10 +201,10 @@
         <option value="$PROJECT_DIR$/src/main/java/metier/BorneEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/EntityService.java" />
         <option value="$PROJECT_DIR$/src/main/java/metier/Reservation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/EnregistrerReservation.java" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/DemandeInscriptionTopic.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ejb/DemandeReservationTopic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/EnregistrerReservation.java" />
       </list>
     </option>
   </component>
@@ -276,7 +305,7 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="15ae59f9-b956-48d5-aab4-06d837d50672" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560614415931" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560640860730" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../TP Tomcat/ProjetOeuvreSpingBoot/ProjetOeuvreSpingBoot" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -470,7 +499,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96980000" />
+    <option name="totallyTimeSpent" value="99488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -556,13 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/metier/StationEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -666,16 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/DemandeReservationTopic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/EnregistreInscription.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -683,6 +695,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/metier/StationEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -696,10 +715,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ejb/DemandeReservationTopic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/EnregistrerReservation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        <state relative-caret-position="374">
+          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

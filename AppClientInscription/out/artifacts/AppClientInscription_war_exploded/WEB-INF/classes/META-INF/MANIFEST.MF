@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring Data Core
+Automatic-Module-Name: spring.data.commons
+Implementation-Version: 2.1.6.RELEASE
+Built-By: odrotbohm
+Created-By: Apache Maven 3.6.0
+Build-Jdk: 1.8.0_202
+

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: christian
-  Date: 06/04/2018
-  Time: 14:11
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
@@ -17,9 +10,9 @@
 <div>
     <div class="container">
         <div class="form-group">
-            <label> Gestion des demandes d'inscription </label>
+            <label>Gestion des réservations Autolib</label>
             <BR> <BR>
-            <label>Bienvenue sur la page d'accueil de gestion des demandes d'inscription. </label>
+            <label>Bienvenue sur la page d'accueil de gestion des réservations Autolib.</label>
         </div>
     </div>
 </div>
