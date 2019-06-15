@@ -2,11 +2,11 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="MySQL - lesinscriptions@localhost" uuid="15ae59f9-b956-48d5-aab4-06d837d50672">
-      <driver-ref>mysql.8</driver-ref>
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <configured-by-url>true</configured-by-url>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/lesinscriptions</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/autolib</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
@@ -17,14 +17,14 @@
       </driver-properties>
     </data-source>
     <data-source source="LOCAL" name="PInscription/Hibernate" uuid="117f3e3b-00f0-4a60-bbb6-7550de1c812d">
-      <driver-ref>mysql.8</driver-ref>
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>Hibernate
 
 D:/epul/progrrepartie/annee2019/Chapitre 8/tp/InscriptionTopic/src/main/resources/META-INF/persistence.xml</remarks>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/lesinscriptions</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/autolib</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="yearIsDateType" value="false" />

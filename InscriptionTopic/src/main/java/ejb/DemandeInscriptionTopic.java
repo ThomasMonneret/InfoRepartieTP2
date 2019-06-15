@@ -1,5 +1,6 @@
 package ejb;
 
+import dao.EnregistrerReservation;
 import meserreurs.MonException;
 import metier.Inscription;
 import metier.InscriptionEntity;
@@ -21,6 +22,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import dao.EnregistreInscription;
+import metier.Reservation;
+import metier.ReservationEntity;
 
 /**
  * Message-Driven Bean implementation class for: DemandeInscriptionTopic
@@ -28,9 +31,9 @@ import dao.EnregistreInscription;
 // On se connecte à la file d'attente InscriptionTopic
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "destination",
-                propertyValue = "java:jboss/exported/topic/DemandeInscriptionJmsTopic"),
+                propertyValue = "java:jboss/exported/topic/DemandeReservationJmsTopic"),
         @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic")},
-        mappedName = "DemandeInscriptionJmsTopic")
+        mappedName = "DemandeReservationJmsTopic")
 public class DemandeInscriptionTopic implements MessageListener {
 
     @Resource
@@ -52,51 +55,91 @@ public class DemandeInscriptionTopic implements MessageListener {
         // On gère le message récupéré dans le topic
 
         try {
-            // On transforme le message en demande d'inscription
+            // On transforme le message en demande de réservation
             ObjectMessage objectMessage = (ObjectMessage) message;
-            Inscription uneInscription = (Inscription) objectMessage.getObject();
+            Reservation uneReservation = (Reservation) objectMessage.getObject();
 
             if (message != null) {
-                // On insère cette demande d'inscription dans la base de données
+                // On insère cette demande de réservation dans la base de données
                 // on s'assure que l'écriture ne se fera qu'une fois.
                 message = null;
 
                 try {
 
                     // on construit un objet Entity
-                    InscriptionEntity uneInsEntity = new InscriptionEntity();
+                    ReservationEntity uneResEntity = new ReservationEntity();
                     // on tansfère les données reçues dans l'objet Entity
-                    uneInsEntity.setNomcandidat(uneInscription.getNomcandidat());
-                    uneInsEntity.setPrenomcandidat(uneInscription.getPrenomcandidat());
-                    uneInsEntity.setCpostal(uneInscription.getCpostal());
-                    uneInsEntity.setVille(uneInscription.getVille());
-                    uneInsEntity.setAdresse(uneInscription.getAdresse());
-                    uneInsEntity.setDatenaissance(uneInscription.getDatenaissance());
-                    System.out.println("Nom :"+ uneInsEntity.getNomcandidat());
-                    EnregistreInscription uneE = new EnregistreInscription();
+                    uneResEntity.setVehicule(uneReservation.getVehicule());
+                    uneResEntity.setClient(uneReservation.getClient());
+                    uneResEntity.setDateReservation(uneReservation.getDateReservation());
+                    uneResEntity.setDateEcheance(uneReservation.getDateEcheance());
+                    EnregistrerReservation uneR = new EnregistrerReservation();
 
-                    uneE.insertionInscription(uneInsEntity);
-                } catch (NamingException er) {
-                    System.out.println("Message Naming  :" + er.getMessage());
-                    EcritureErreur(er.getMessage());
-                } catch (MonException e) {
-                    EcritureErreur(e.getMessage());
-                    System.out.println("Message MonException :" + e.getMessage());
+                    uneR.insertionReservation(uneResEntity);
                 } catch (Exception ex) {
                     System.out.println("Message Excep :" + ex.getMessage());
                     EcritureErreur(ex.getMessage());
                 }
             }
 
-        }   catch (JMSException  e) {
-                e.printStackTrace();
-                System.err.println("JMSException in onMessage(): " + e.getMessage());
-               EcritureErreur(e.getMessage());
-            }
-         catch (Exception ex) {
-        System.out.println("Erreur Cast : "); ex.printStackTrace(System.out);
-        EcritureErreur(ex.getMessage());
-    }
+        }   catch (JMSException e) {
+            e.printStackTrace();
+            System.err.println("JMSException in onMessage(): " + e.getMessage());
+            EcritureErreur(e.getMessage());
+        }
+        catch (Exception ex) {
+            System.out.println("Erreur Cast : "); ex.printStackTrace(System.out);
+            EcritureErreur(ex.getMessage());
+        }
+//        boolean ok = false;
+//        // On gère le message récupéré dans le topic
+//
+//        try {
+//            // On transforme le message en demande d'inscription
+//            ObjectMessage objectMessage = (ObjectMessage) message;
+//            Inscription uneInscription = (Inscription) objectMessage.getObject();
+//
+//            if (message != null) {
+//                // On insère cette demande d'inscription dans la base de données
+//                // on s'assure que l'écriture ne se fera qu'une fois.
+//                message = null;
+//
+//                try {
+//
+//                    // on construit un objet Entity
+//                    InscriptionEntity uneInsEntity = new InscriptionEntity();
+//                    // on tansfère les données reçues dans l'objet Entity
+//                    uneInsEntity.setNomcandidat(uneInscription.getNomcandidat());
+//                    uneInsEntity.setPrenomcandidat(uneInscription.getPrenomcandidat());
+//                    uneInsEntity.setCpostal(uneInscription.getCpostal());
+//                    uneInsEntity.setVille(uneInscription.getVille());
+//                    uneInsEntity.setAdresse(uneInscription.getAdresse());
+//                    uneInsEntity.setDatenaissance(uneInscription.getDatenaissance());
+//                    System.out.println("Nom :"+ uneInsEntity.getNomcandidat());
+//                    EnregistreInscription uneE = new EnregistreInscription();
+//
+//                    uneE.insertionInscription(uneInsEntity);
+//                } catch (NamingException er) {
+//                    System.out.println("Message Naming  :" + er.getMessage());
+//                    EcritureErreur(er.getMessage());
+//                } catch (MonException e) {
+//                    EcritureErreur(e.getMessage());
+//                    System.out.println("Message MonException :" + e.getMessage());
+//                } catch (Exception ex) {
+//                    System.out.println("Message Excep :" + ex.getMessage());
+//                    EcritureErreur(ex.getMessage());
+//                }
+//            }
+//
+//        }   catch (JMSException  e) {
+//                e.printStackTrace();
+//                System.err.println("JMSException in onMessage(): " + e.getMessage());
+//               EcritureErreur(e.getMessage());
+//            }
+//         catch (Exception ex) {
+//        System.out.println("Erreur Cast : "); ex.printStackTrace(System.out);
+//        EcritureErreur(ex.getMessage());
+//    }
     }
 
     /**

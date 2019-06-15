@@ -26,9 +26,9 @@ import java.util.Date;
 
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "destination",
-                propertyValue = "java:jboss/exported/topic/DemandeReservationJmsTopic"),
+                propertyValue = "java:jboss/exported/topic/DemandeInscriptionJmsTopic"),
         @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic")},
-        mappedName = "DemandeReservationJmsTopic")
+        mappedName = "DemandeInscriptionJmsTopic")
 public class DemandeReservationTopic implements MessageListener {
 
     @Resource
