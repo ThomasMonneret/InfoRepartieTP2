@@ -22,7 +22,7 @@
 		<dist.key>DATAJPA</dist.key>
 
 		<eclipselink>2.6.5</eclipselink>
-		<hibernate>5.2.17.Final</hibernate>
+		<hibernate>5.4.24.Final</hibernate>
 		<hibernate.groupId>org.hibernate</hibernate.groupId>
 		<jpa>2.0.0</jpa>
 		<springdata.commons>2.1.6.RELEASE</springdata.commons>
